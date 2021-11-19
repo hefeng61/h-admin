@@ -1,14 +1,13 @@
 package top.hf.hadmin.domain;
 
-import com.baomidou.mybatisplus.annotation.IdType;
-import com.baomidou.mybatisplus.annotation.TableField;
-import com.baomidou.mybatisplus.annotation.TableId;
-import com.baomidou.mybatisplus.annotation.TableName;
+import com.baomidou.mybatisplus.annotation.*;
 import lombok.Getter;
 import lombok.Setter;
 
 import javax.validation.constraints.NotBlank;
 import java.io.Serializable;
+import java.sql.Timestamp;
+import java.util.Date;
 
 /**
  * @Author hefeng
@@ -40,4 +39,8 @@ public class SysUser implements Serializable {
     private Integer isAdmin;
     @TableField
     private Integer enable;
+    @TableField(value = "create_time",fill = FieldFill.INSERT)
+    private Object createTime;
+    @TableField(value = "update_time",fill = FieldFill.UPDATE)
+    private Object updateTime;
 }

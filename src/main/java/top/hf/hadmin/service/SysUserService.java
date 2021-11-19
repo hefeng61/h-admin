@@ -20,4 +20,14 @@ public interface SysUserService {
      **/
 
     Map<String,Object> doLogin(SysUser user);
+
+    /**
+     * @Description: 新增用户
+     * @Author: hefeng
+     * @Date: 2021/11/16 9:18
+     * @Param:
+     * @Return:
+     **/
+
+    void create(SysUser user);
 }
