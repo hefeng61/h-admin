@@ -44,6 +44,6 @@ public class SysUserServiceImpl implements SysUserService {
     @Override
     public void create(SysUser user) {
 //        user.setPassword(SaSecureUtil.md5(user.getPassword()));
-//        userMapper.insert(user);
+        userMapper.insert(user);
     }
 }

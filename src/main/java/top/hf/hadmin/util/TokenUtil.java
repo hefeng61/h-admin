@@ -5,12 +5,14 @@ import com.auth0.jwt.JWT;
 import com.auth0.jwt.JWTVerifier;
 import com.auth0.jwt.algorithms.Algorithm;
 import com.auth0.jwt.interfaces.DecodedJWT;
+import org.springframework.stereotype.Component;
 
 /**
  * @Author hefeng
  * @Description token工具类
  * @Date 2021/11/19 14:18
  */
+@Component
 public class TokenUtil {
 
     private static final String CLAIM = "user";
